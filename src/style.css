@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+    font-weight: bold;
+}
+.problem-container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr / 1fr 10fr;
+}
+
+.problem-container div {
+    /* border: 1px solid red; */
+}
+.sudoku-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.sudoku-container #sudoku-modifier{
+    margin-top: 1em;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+}
+.sudoku-container #status {
+    margin-top: 1em;
+    left: 50%;
+    top: 6%;
+    position: absolute;
+    transform: translate(-50%, -6%);
+}
+.board-container div {
+    width: 5rem;
+    height: 5rem; 
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.board-container {
+    display: grid;
+    grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}

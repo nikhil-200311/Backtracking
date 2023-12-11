@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backtrack Visualizer</title>
+</head>
+<body>
+    <script src="main.js" defer></script>
+    <div class="problem-container">
+        <div class="sudoku-container">
+
+            <div id="sudoku-modifier">
+                <p id="range-value">Difficulty: 26</p>
+                <input type="range" id="difficulty" min="0" max ="80" value="26" step="1">
+                <button id="solve-sudoku">Solve Sudoku</button>
+                <button id="generate-board">Generate New Board</button>
+                <select name="speed" id="speed">
+                    <option value="Slow">Slow</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Fast">Fast</option>
+                    <option value="Super Fast">Super Fast</option>
+                </select>
+                <button id="stop-execution">Stop</button>
+            </div>
+
+            <div id="status">
+                <h2 id="current-status"></h2>
+            </div>
+        
+            <div class="board-container">
+        
+        
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
