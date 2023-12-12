@@ -53,3 +53,50 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
 }
+
+.n-queens-container #picker-and-board {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#queen-board {
+   width: 70%;
+   height: 70%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    
+}
+
+
+#queen-board div {
+    font-size: 3em;
+    width: 100%;
+    height: 100%; 
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#solved-board-div div   {
+    border: 0.5px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+#solved-boards {
+    overflow: auto;
+    box-shadow: -5px 0 5px -5px #333;
+    width: 100%; 
+    height: 100vh;
+}

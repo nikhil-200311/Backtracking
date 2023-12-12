@@ -8,6 +8,14 @@
 <body>
     <script src="main.js" defer></script>
     <div class="problem-container">
+
+        <div>
+            <select name="select-problem" id="select-problem">
+                <option value="Sudoku">Sudoku Solver</option>
+                <option value="N-Queens">N-Queens</option>
+            </select>
+        </div>
+
         <div class="sudoku-container">
 
             <div id="sudoku-modifier">
@@ -31,6 +39,29 @@
             <div class="board-container">
         
         
+            </div>
+        </div>
+
+        <div class="n-queens-container" style="display: none;">
+            <div id="picker-and-board">
+                <div id="number-picker" style="margin-top: 1em;">
+                    <p id="number-value">Value: 4</p>
+                    <input id="no-of-queens" type="range" min="1" max="9" value="4" step="1">
+                    <button id="submit-queen-range">Solve</button>
+                    <button id="stop-execution">Stop</button>
+                    <select name="queen-speed" id="queen-speed">
+                        <option value="Slow">Slow</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Fast">Fast</option>
+                    </select>
+                </div>
+                <div id="result"><h3>Total: </h3></div>
+                <div id="queen-board">
+
+                </div>
+            </div>
+            <div id="solved-boards">
+                
             </div>
         </div>
 
