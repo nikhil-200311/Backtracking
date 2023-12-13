@@ -54,7 +54,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.n-queens-container #picker-and-board {
+.n-queens-container #picker-and-board, .n-knights-container #picker-and-board{
     width: 100%;
     height: 100%;
     display: flex;
@@ -63,7 +63,7 @@ body {
     gap: 2em;
 }
 
-#queen-board {
+#queen-board, #knight-board {
    width: 70%;
    height: 70%;
    display: flex;
@@ -73,7 +73,7 @@ body {
 }
 
 
-#queen-board div {
+#queen-board div, #knight-board div {
     font-size: 3em;
     width: 100%;
     height: 100%; 
@@ -94,7 +94,7 @@ body {
     font-size: 2em;
 }
 
-#solved-boards {
+#solved-boards, #knight-solved-boards {
     overflow: auto;
     box-shadow: -5px 0 5px -5px #333;
     width: 100%; 
