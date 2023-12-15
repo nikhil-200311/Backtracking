@@ -14,6 +14,8 @@
                 <option value="Sudoku">Sudoku Solver</option>
                 <option value="N-Queens">N-Queens</option>
                 <option value="N-Knights">N-Knights</option>
+                <option value="Word-Search">Word Search</option>
+
             </select>
         </div>
 
@@ -86,6 +88,31 @@
             <div id="knight-solved-boards">
                 
             </div>
+        </div>
+
+        <div class="word-search-container" style="display: none;">
+
+            <div id="board-controls">
+                <div>
+                    <button id="generate-word-board">Generate Board</button>
+                </div>
+                <div>
+                    <select name="search-speed" id="search-speed">
+                        <option value="Slow">Slow</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Fast">Fast</option>
+                    </select>
+                </div>
+                <div id="search">
+                    <input id="word-to-find" type="text" placeholder="Enter word">
+                    <button id="find-word">Find Word</button>
+                </div>
+            </div>
+
+            <div id="search-board">
+
+            </div>
+
         </div>
 
     </div>
