@@ -166,17 +166,17 @@ async function solveSudokuStepByStep(board, row, col) {
     
                 if (!isSolved) {
                     board[row][col].textContent = "? " + i;
-                    board[row][col].style.backgroundColor = "red";
+                    board[row][col].style.color = "red";
                     await sleep(value1);
-                    board[row][col].style.backgroundColor = "#32de84";
+                    board[row][col].style.color = "#32de84";
     
                 }
     
                 if (isSafe(board, row, col, i)) {
                     board[row][col].textContent = i;
-                    board[row][col].style.backgroundColor = "red";
+                    board[row][col].style.color = "red";
                     await sleep(value1);
-                    board[row][col].style.backgroundColor = "#32de84";
+                    board[row][col].style.color = "#32de84";
                     await sleep(value1);
                     await solveSudokuStepByStep(board, row, col + 1);                
                     await sleep(value2);
@@ -185,7 +185,7 @@ async function solveSudokuStepByStep(board, row, col) {
             }
     
             if (!isSolved) {
-                board[row][col].style.backgroundColor = "red";
+                board[row][col].style.color = "red";
                 board[row][col].textContent = "";
             } else {
                 return;

@@ -65,7 +65,7 @@ solveSpeed.addEventListener("change", function(event) {
 });
 
 
-export default async function nQueens() {
+async function nQueens() {
 
     if (board.length > 0) {
 
@@ -94,11 +94,30 @@ function createDefaultBoard() {
             const div = document.createElement("div");
             newBoard[i][j] = div;
             queenBoard.append(div);
-        
+
+            colorFields(div, i, j);
         }
     }
     queenBoard.style = `display: grid; grid-template: repeat(4, 1fr) / repeat(4, 1fr)`;
     board = newBoard;
+}
+
+function colorFields(div, i, j) {
+
+    if (i % 2 === 0) {
+
+        if (j % 2 !== 0) {
+            div.style.backgroundColor = "rgba(135,50,0,.5)";
+        }
+
+    } else {
+
+        if (j % 2 === 0) {
+            div.style.backgroundColor = "rgba(135,50,0,.5)";
+        }
+
+    }
+
 }
 
 async function createQueenBoard(value) {
@@ -117,6 +136,9 @@ async function createQueenBoard(value) {
                 const div = document.createElement("div");
                 newBoard[i][j] = div;
                 queenBoard.append(div);
+
+                colorFields(div, i, j);
+                
             
             }
         }
@@ -176,7 +198,7 @@ async function solveForNQueens(board, row) {
             await sleep(value1);    
 
             board[row][col].textContent = "\u2655";
-            board[row][col].style.color = "red";
+            board[row][col].style.color = "rgba(255, 0, 0, 0.6)";
             
             await sleep(value2);      
             
@@ -214,6 +236,10 @@ function appendBoard(board) {
 
             const div = document.createElement("div");
             
+            if (board[i][j].style.backgroundColor) {
+                div.style.backgroundColor = board[i][j].style.backgroundColor;
+            }
+
 
             if (board[i][j].textContent == "\u2655") {
                 div.textContent = "\u2655";
@@ -261,3 +287,5 @@ function isSafe(board, row, col) {
 
 
 }
+
+export { nQueens, colorFields };

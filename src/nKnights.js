@@ -1,4 +1,6 @@
 
+import { colorFields } from "./nQueens";
+
 const knightBoard = document.querySelector("#knight-board");
 const solvedBoards = document.querySelector("#knight-solved-boards");
 const submitNum = document.querySelector("#submit-knight-range");
@@ -94,7 +96,8 @@ function createDefaultBoard() {
             const div = document.createElement("div");
             newBoard[i][j] = div;
             knightBoard.append(div);
-        
+
+            colorFields(div, i, j);
         }
     }
     knightBoard.style = `display: grid; grid-template: repeat(4, 1fr) / repeat(4, 1fr)`;
@@ -118,6 +121,8 @@ async function createKnightBoard(value) {
                 newBoard[i][j] = div;
                 knightBoard.append(div);
             
+                colorFields(div, i, j);
+
             }
         }
     
@@ -187,7 +192,7 @@ async function solveForNKnights(board, row, col, target) {
         await sleep(value1);    
 
         board[row][col].textContent = "\u265E";
-        board[row][col].style.color = "red";
+        board[row][col].style.color = "rgba(255, 0, 0, 0.6)";
         
         await sleep(value2);   
         board[row][col].textContent = "";
@@ -229,7 +234,10 @@ function appendBoard(board) {
         for (let j = 0; j < board[i].length; j++) {
 
             const div = document.createElement("div");
-            
+                        
+            if (board[i][j].style.backgroundColor) {
+                div.style.backgroundColor = board[i][j].style.backgroundColor;
+            }
 
             if (board[i][j].textContent == "\u265E") {
                 div.textContent = "\u265E";
