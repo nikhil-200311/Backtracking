@@ -147,7 +147,6 @@ async function solveSudokuStepByStep(board, row, col) {
 
         if (row == board.length-1 && col == board.length) {
             isSolved = true;
-            currentStatus.textContent = "CLEARING CALL STACK";
             return;
         }
     
@@ -313,9 +312,6 @@ const difficultyValue = document.querySelector("#range-value");
 const difficuly = document.querySelector("#difficulty");
 const generateBoardButton = document.querySelector("#generate-board");
 const solveSudokuButton = document.querySelector("#solve-sudoku");
-const currentStatus = document.querySelector("#current-status");
-
-
 
 let chosenDifficuly = 26;
 
@@ -342,7 +338,6 @@ export default function solveSudoku() {
         if (solved || count === 0) {
             displayBoard();
             puzzle = displaySolvableBoard(chosenDifficuly);
-            currentStatus.textContent = "";
             isSolved = false;
             solved = false;
         }
@@ -352,12 +347,10 @@ export default function solveSudoku() {
     
             if (count == 0) {
                 count = 1;
-                currentStatus.textContent = "SOLVING";
     
                 await displaySudokuStepByStep(puzzle);
     
                 solved = true;
-                currentStatus.textContent = "DONE!";
                 isSolved = false;
                 count = 0;
             }
