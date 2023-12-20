@@ -4,7 +4,9 @@ import solveSudoku from "./sudokuSolver";
 import nKnights from "./nKnights";
 import wordSearch from "./wordSearch";
 
-
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+}
 
 const wordSearchContainer = document.querySelector(".word-search-container");
 const nQueensContainer = document.querySelector(".n-queens-container");
