@@ -1,12 +1,15 @@
 const path = require('path');
 
+// Use the PORT environment variable if it exists, otherwise default to 9100
+const PORT = process.env.PORT || 9100;
+
 module.exports = {
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 9100,
+    port: PORT,
   },
   entry: './src/index.js',
   output: {
@@ -24,6 +27,5 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
-    
   },
 };
