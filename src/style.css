@@ -5,6 +5,8 @@
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(61, 61, 61)  ;
+    color: aliceblue;
 }
 .problem-container {
     height: 100vh;
@@ -70,7 +72,7 @@ body {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   background-image: url("http://www.wood-database.com/wp-content/uploads/bamboo-qs-sealed.jpg");
+   background-image: url("https://blackwhite.pictures/media/c/2009/chess-king-white-background-victory-1868.jpg");
    padding: 1.5em;
    background-repeat: no-repeat;
    background-size: cover;
@@ -88,7 +90,7 @@ body {
 }
 
 #solved-board-div {
-    background-image: url("http://www.wood-database.com/wp-content/uploads/bamboo-qs-sealed.jpg");
+    background-image: url("https://blackwhite.pictures/media/c/2009/chess-king-white-background-victory-1868.jpg");
     width: 80%;
 }
 
@@ -103,6 +105,7 @@ body {
 }
 
 #solved-boards, #knight-solved-boards {
+    color: black;
     overflow: auto;
     box-shadow: -5px 0 5px -5px #333;
     width: 100%; 

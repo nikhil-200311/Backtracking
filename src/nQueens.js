@@ -107,13 +107,13 @@ function colorFields(div, i, j) {
     if (i % 2 === 0) {
 
         if (j % 2 !== 0) {
-            div.style.backgroundColor = "rgba(135,50,0,.5)";
+            div.style.backgroundColor = "rgb(24 24 24 / 50%)";
         }
 
     } else {
 
         if (j % 2 === 0) {
-            div.style.backgroundColor = "rgba(135,50,0,.5)";
+            div.style.backgroundColor = "rgb(24 24 24 / 50%)";
         }
 
     }
